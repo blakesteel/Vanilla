@@ -31,39 +31,39 @@ import org.spout.vanilla.material.generic.GenericBlock;
 
 public class Wool extends GenericBlock implements MovingBlock {
 	public static final Wool WHITE = new Wool("White Wool");
-	public static final Wool ORANGE = new Wool("Orange Wool", WoolColor.Orange, WHITE).register();
-	public static final Wool MAGENTA = new Wool("Magenta Wool", WoolColor.Magenta, WHITE).register();
-	public static final Wool LIGHTBLUE = new Wool("Light Blue Wool", WoolColor.LightBlue, WHITE).register();
-	public static final Wool YELLOW = new Wool("Yellow Wool", WoolColor.Yellow, WHITE).register();
-	public static final Wool LIME = new Wool("Lime Wool", WoolColor.Lime, WHITE).register();
-	public static final Wool PINK = new Wool("Pink Wool", WoolColor.Pink, WHITE).register();
-	public static final Wool GRAY = new Wool("Gray Wool", WoolColor.Gray, WHITE).register();
-	public static final Wool SILVER = new Wool("Silver Wool", WoolColor.Silver, WHITE).register();
-	public static final Wool CYAN = new Wool("Cyan Wool", WoolColor.Cyan, WHITE).register();
-	public static final Wool PURPLE = new Wool("Purple Wool", WoolColor.Purple, WHITE).register();
-	public static final Wool BLUE = new Wool("Blue Wool", WoolColor.Blue, WHITE).register();
-	public static final Wool BROWN = new Wool("Brown Wool", WoolColor.Brown, WHITE).register();
-	public static final Wool GREEN = new Wool("Green Wool", WoolColor.Green, WHITE).register();
-	public static final Wool RED = new Wool("Red Wool", WoolColor.Red, WHITE).register();
-	public static final Wool BLACK = new Wool("Black Wool", WoolColor.Black, WHITE).register();
+	public static final Wool ORANGE = new Wool("Orange Wool", WoolColor.ORANGE, WHITE).register();
+	public static final Wool MAGENTA = new Wool("Magenta Wool", WoolColor.MAGENTA, WHITE).register();
+	public static final Wool LIGHTBLUE = new Wool("Light Blue Wool", WoolColor.LIGHTBLUE, WHITE).register();
+	public static final Wool YELLOW = new Wool("Yellow Wool", WoolColor.YELLOW, WHITE).register();
+	public static final Wool LIME = new Wool("Lime Wool", WoolColor.LIME, WHITE).register();
+	public static final Wool PINK = new Wool("Pink Wool", WoolColor.PINK, WHITE).register();
+	public static final Wool GRAY = new Wool("Gray Wool", WoolColor.GRAY, WHITE).register();
+	public static final Wool SILVER = new Wool("Silver Wool", WoolColor.SILVER, WHITE).register();
+	public static final Wool CYAN = new Wool("Cyan Wool", WoolColor.CYAN, WHITE).register();
+	public static final Wool PURPLE = new Wool("Purple Wool", WoolColor.PURPLE, WHITE).register();
+	public static final Wool BLUE = new Wool("Blue Wool", WoolColor.BLUE, WHITE).register();
+	public static final Wool BROWN = new Wool("Brown Wool", WoolColor.BROWN, WHITE).register();
+	public static final Wool GREEN = new Wool("Green Wool", WoolColor.GREEN, WHITE).register();
+	public static final Wool RED = new Wool("Red Wool", WoolColor.RED, WHITE).register();
+	public static final Wool BLACK = new Wool("Black Wool", WoolColor.BLACK, WHITE).register();
 	
 	public static enum WoolColor implements DataSource {
-		White(0),
-		Orange(1),
-		Magenta(2),
-		LightBlue(3),
-		Yellow(4),
-		Lime(5),
-		Pink(6),
-		Gray(7),
-		Silver(8),
-		Cyan(9),
-		Purple(10),
-		Blue(11),
-		Brown(12),
-		Green(13),
-		Red(14),
-		Black(15);
+		WHITE(0),
+		ORANGE(1),
+		MAGENTA(2),
+		LIGHTBLUE(3),
+		YELLOW(4),
+		LIME(5),
+		PINK(6),
+		GRAY(7),
+		SILVER(8),
+		CYAN(9),
+		PURPLE(10),
+		BLUE(11),
+		BROWN(12),
+		GREEN(13),
+		RED(14),
+		BLACK(15);
 
 		private final short data;
 
@@ -82,7 +82,7 @@ public class Wool extends GenericBlock implements MovingBlock {
 	public Wool(String name) {
 		super(name, 35);
 		this.setDefault();
-		this.color = WoolColor.White;
+		this.color = WoolColor.WHITE;
 	}
 
 	public Wool(String name, WoolColor color, Wool parent) {
