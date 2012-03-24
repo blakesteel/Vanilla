@@ -25,9 +25,9 @@
  */
 package org.spout.vanilla.controller.living;
 
-import org.spout.vanilla.controller.GravityAction;
+import org.spout.vanilla.controller.action.GravityAction;
 import org.spout.vanilla.controller.VanillaController;
-import org.spout.vanilla.controller.WanderAction;
+import org.spout.vanilla.controller.action.WanderAction;
 
 public abstract class Living extends VanillaController {
 

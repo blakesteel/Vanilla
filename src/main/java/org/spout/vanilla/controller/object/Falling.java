@@ -26,7 +26,7 @@
 package org.spout.vanilla.controller.object;
 
 import org.spout.api.math.Vector3;
-import org.spout.vanilla.controller.GravityAction;
+import org.spout.vanilla.controller.action.GravityAction;
 
 /**
  * Controller that vertically falls. This is used for Sand and Gravel that fall (and anything else that would do so).

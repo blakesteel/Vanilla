@@ -29,6 +29,7 @@ import org.spout.api.protocol.HandlerLookupService;
 import org.spout.api.protocol.Message;
 import org.spout.api.protocol.MessageHandler;
 
+import org.spout.vanilla.protocol.codec.PlayerAbilityCodec;
 import org.spout.vanilla.protocol.handler.AnimateEntityMessageHandler;
 import org.spout.vanilla.protocol.handler.BlockPlacementMessageHandler;
 import org.spout.vanilla.protocol.handler.ChangeItemMessageHandler;
@@ -41,6 +42,7 @@ import org.spout.vanilla.protocol.handler.EntityInteractionMessageHandler;
 import org.spout.vanilla.protocol.handler.GroundMessageHandler;
 import org.spout.vanilla.protocol.handler.KickMessageHandler;
 import org.spout.vanilla.protocol.handler.PingMessageHandler;
+import org.spout.vanilla.protocol.handler.PlayerAbilityMessageHandler;
 import org.spout.vanilla.protocol.handler.PositionMessageHandler;
 import org.spout.vanilla.protocol.handler.PositionRotationMessageHandler;
 import org.spout.vanilla.protocol.handler.QuickBarMessageHandler;
@@ -59,6 +61,7 @@ import org.spout.vanilla.protocol.msg.EntityInteractionMessage;
 import org.spout.vanilla.protocol.msg.GroundMessage;
 import org.spout.vanilla.protocol.msg.KickMessage;
 import org.spout.vanilla.protocol.msg.PingMessage;
+import org.spout.vanilla.protocol.msg.PlayerAbilityMessage;
 import org.spout.vanilla.protocol.msg.PositionMessage;
 import org.spout.vanilla.protocol.msg.PositionRotationMessage;
 import org.spout.vanilla.protocol.msg.QuickBarMessage;
@@ -91,6 +94,7 @@ public class VanillaHandlerLookupService extends HandlerLookupService {
 			bind(RespawnMessage.class, RespawnMessageHandler.class);
 			bind(EntityInteractionMessage.class, EntityInteractionMessageHandler.class);
 			bind(EntityHeadYawMessage.class, EntityHeadYawMessageHandler.class);
+			bind(PlayerAbilityMessage.class, PlayerAbilityMessageHandler.class);
 		} catch (Exception ex) {
 			throw new ExceptionInInitializerError(ex);
 		}

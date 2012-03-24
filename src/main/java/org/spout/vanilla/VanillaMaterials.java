@@ -40,6 +40,8 @@ import org.spout.vanilla.material.block.MinecartTrack;
 import org.spout.vanilla.material.block.MinecartTrackDetector;
 import org.spout.vanilla.material.block.MinecartTrackPowered;
 import org.spout.vanilla.material.block.Ore;
+import org.spout.vanilla.material.block.Plank;
+import org.spout.vanilla.material.block.Sandstone;
 import org.spout.vanilla.material.block.Sapling;
 import org.spout.vanilla.material.block.Slab;
 import org.spout.vanilla.material.block.Solid;
@@ -79,7 +81,7 @@ public final class VanillaMaterials {
 	public static final Grass GRASS = (Grass) register(new Grass("Grass").setHardness(0.6F).setResistance(0.8F));
 	public static final Solid DIRT = (Solid) register(new Solid("Dirt", 3).setHardness(0.5F).setResistance(0.8F));
 	public static final Solid COBBLESTONE = (Solid) register(new Solid("Cobblestone", 4).setHardness(2.0F).setResistance(10.0F));
-	public static final Solid WOOD = (Solid) register(new Solid("Wooden Planks", 5).setHardness(2.0F).setResistance(5.0F));
+	public static final Plank PLANK = Plank.PLANK;
 	public static final Sapling SAPLING = Sapling.DEFAULT;	
 	public static final Solid BEDROCK = (Solid) register(new Solid("Bedrock", 7).setResistance(6000000.0F));
 	public static final GenericLiquid WATER = (GenericLiquid) register(new GenericLiquid("Water", 8, true).setHardness(100.0F).setResistance(166.7F).setOpacity((byte) 2));
@@ -98,7 +100,7 @@ public final class VanillaMaterials {
 	public static final Ore LAPIS_ORE = (Ore) register(new Ore("Lapis Lazuli Ore", 21).setMinDropCount(4).setMaxDropCount(8).setHardness(3.0F).setResistance(5.0F));
 	public static final Solid LAPIS_BLOCK = (Solid) register(new Solid("Lapis Lazuli Block", 22).setHardness(3.0F).setResistance(5.0F));
 	public static final Solid DISPENSER = (Solid) register(new Solid("Dispenser", 23).setHardness(3.5F).setResistance(5.8F));
-	public static final Solid SANDSTONE = (Solid) register(new Solid("Sandstone", 24).setHardness(0.8F).setResistance(1.3F));
+	public static final Sandstone SANDSTONE = Sandstone.SANDSTONE; 
 	public static final Solid NOTEBLOCK = (Solid) register(new Solid("Note Block", 25).setHardness(0.8F).setResistance(1.3F));
 	public static final Solid BED_BLOCK = (Solid) register(new Solid("Bed", 26).setHardness(0.2F).setResistance(0.3F));
 	public static final MinecartTrackPowered POWERED_RAIL = (MinecartTrackPowered) register(new MinecartTrackPowered("Powered Rail", 27).setHardness(0.7F).setResistance(1.2F));
@@ -330,7 +332,7 @@ public final class VanillaMaterials {
 	public static final GenericBlockItem CAULDRON = register(new GenericBlockItem("Cauldron", 380, VanillaMaterials.CAULDRON_BLOCK));
 	public static final GenericItem EYE_OF_ENDER = register(new GenericItem("Eye of Ender", 381));
 	public static final GenericItem GLISTERING_MELON = register(new GenericItem("Glistering Melon", 382));
-	/** Warning: This is NOT the data=0 sub-material! */
+	/** TODO: Warning: This is NOT the data=0 sub-material! */
 	public static final SpawnEgg SPAWN_EGG = SpawnEgg.PIG;
 	public static final GenericItem BOTTLE_O_ENCHANTING = register(new GenericItem("Bottle o' Enchanting", 384));
 	public static final GenericBlockItem FIRE_CHARGE = register(new GenericBlockItem("Fire Charge", 385, VanillaMaterials.FIRE)); //Basic Implementation

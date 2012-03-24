@@ -30,7 +30,9 @@ import org.spout.vanilla.material.MovingBlock;
 import org.spout.vanilla.material.generic.GenericBlock;
 
 public class Wool extends GenericBlock implements MovingBlock {
+	//Parent material
 	public static final Wool WHITE = register(new Wool("White Wool"));
+	//Sub-materials
 	public static final Wool ORANGE = register(new Wool("Orange Wool", WoolColor.ORANGE, WHITE));
 	public static final Wool MAGENTA = register(new Wool("Magenta Wool", WoolColor.MAGENTA, WHITE));
 	public static final Wool LIGHTBLUE = register(new Wool("Light Blue Wool", WoolColor.LIGHTBLUE, WHITE));
@@ -46,36 +48,6 @@ public class Wool extends GenericBlock implements MovingBlock {
 	public static final Wool GREEN = register(new Wool("Green Wool", WoolColor.GREEN, WHITE));
 	public static final Wool RED = register(new Wool("Red Wool", WoolColor.RED, WHITE));
 	public static final Wool BLACK = register(new Wool("Black Wool", WoolColor.BLACK, WHITE));
-	
-	public static enum WoolColor implements DataSource {
-		WHITE(0),
-		ORANGE(1),
-		MAGENTA(2),
-		LIGHTBLUE(3),
-		YELLOW(4),
-		LIME(5),
-		PINK(6),
-		GRAY(7),
-		SILVER(8),
-		CYAN(9),
-		PURPLE(10),
-		BLUE(11),
-		BROWN(12),
-		GREEN(13),
-		RED(14),
-		BLACK(15);
-
-		private final short data;
-
-		private WoolColor(int data) {
-			this.data = (short) data;
-		}
-
-		@Override
-		public short getData() {
-			return this.data;
-		}
-	}
 
 	private final WoolColor color;
 
@@ -108,9 +80,39 @@ public class Wool extends GenericBlock implements MovingBlock {
 	public short getData() {
 		return color.getData();
 	}
-	
+
 	@Override
 	public Wool getParentMaterial() {
 		return (Wool) super.getParentMaterial();
+	}
+
+	public static enum WoolColor implements DataSource {
+		WHITE(0),
+		ORANGE(1),
+		MAGENTA(2),
+		LIGHTBLUE(3),
+		YELLOW(4),
+		LIME(5),
+		PINK(6),
+		GRAY(7),
+		SILVER(8),
+		CYAN(9),
+		PURPLE(10),
+		BLUE(11),
+		BROWN(12),
+		GREEN(13),
+		RED(14),
+		BLACK(15);
+
+		private final short data;
+
+		private WoolColor(int data) {
+			this.data = (short) data;
+		}
+
+		@Override
+		public short getData() {
+			return this.data;
+		}
 	}
 }
